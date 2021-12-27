@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.site-search-widget {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.site-search-widget .site-search-box {
+  display: flex;
+}
+
+.site-search-widget .site-search-box .search-input-box {
+  display: flex;
+  position: relative;
+  flex: 1 1;
+}
+
+.site-search-widget .search-input {
+  display: flex;
+  flex:1;
+  font-size: 1.4em;
+  padding: 5px 10px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border: 2px solid #abb8b8;
+  border-right: none;
+}
+
+.site-search-widget .search-button {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4em;
+  width:6rem;
+  background-color: #505050;
   color: white;
+  font-weight: bold;
+  padding: 10px;
+  margin-left: auto;
+  text-align: center;
+  cursor: pointer;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: 2px solid #505050;
+  border-left: none;
 }
 
-.App-link {
-  color: #61dafb;
+.site-search-widget .search-results {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 1.1em;
+  -webkit-box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+  box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+  z-index: 1000 !important;
+  border-bottom: 3px solid #cbcbcb;
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: 90vh;
+  position:absolute;
+  width: 100%;
+  top: 100%;
+  left: 0px
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.site-search-widget .search-results .empty-item {
+  text-align: center;
+  color: darkgray;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.site-search-widget .search-result-item {
+  padding: 5px 10px;
+}
+
+.site-search-widget .search-result-item:hover {
+  background-color: rgb(226, 226, 226);
+  cursor: pointer;
+}
+
+.site-search-widget .search-result-item .item-type {
+  float: right;
+  color: darkgray;
 }
